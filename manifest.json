@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Roblox Friends Keyboard Nav",
+  "version": "1.1",
+  "description": "Navega con las flechas entre páginas y pestañas en la lista de amigos de Roblox.",
+  "content_scripts": [
+    {
+      "matches": ["*://www.roblox.com/*/users/*/friends*", "*://www.roblox.com/users/*/friends*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "roblox-nav-keys@tu-nombre.local",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  }
+}
